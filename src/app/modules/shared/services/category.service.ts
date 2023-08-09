@@ -20,4 +20,13 @@ export class CategoryService {
     return this.http.get(endpoint);
 
   }
+
+  /**
+   * Guarda las categorias
+   */
+  saveCategorie(body:any){
+
+    const endpoint = `${base_url}/categories`;
+    return this.http.post(endpoint,body);
+  }
 }
