@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { emitDistinctChangesOnlyDefaultValue } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 
 const base_url = "http://localhost:8083/api/v1";
@@ -43,5 +44,14 @@ export class ProductService {
   deleteProduct(id: any){
     const endpoint = `${base_url}/products/${id}`;
     return this.http.delete(endpoint);
+  }
+
+  /**
+   * busca por nombre
+   */
+
+  getProductByName(name: any){
+    const endpoint = `${base_url}/products/filter/${name}`;
+    return this.http.get(endpoint);
   }
 }
