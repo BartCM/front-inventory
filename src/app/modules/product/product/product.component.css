@@ -5,10 +5,15 @@
 
 ul li{
   list-style: none;
+  margin-right: 10px;
 }
 
 .right{
   margin-left: auto;
+}
+
+ul {
+  display: flex;
 }
 
 table{
